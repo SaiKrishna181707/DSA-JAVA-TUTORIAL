@@ -1,7 +1,14 @@
+import java.util.Scanner;
+
 public class BinetFormula {
     public static void main(String[] args) {
-        int n = 4;
-        System.out.println(fibonacci(n));  // 55
+        Scanner input = new Scanner(System.in);
+        System.out.print("enter the number of fibonacci numbers you want to print  : ");
+        int n =  input.nextInt();
+        for (int i = 1; i <= n ; i++) {
+            System.out.println(fibonacci(i));
+        }
+
     }
 
     public static int fibonacci(int n) {
