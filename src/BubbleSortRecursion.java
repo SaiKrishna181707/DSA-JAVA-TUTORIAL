@@ -19,7 +19,7 @@ public class BubbleSortRecursion {
         System.out.print(Arrays.toString(Bsr(arr, size,0)));
     }
     static int[] Bsr(int[] arr, int r, int c) {
-        if (r <= 0){
+        if (r == 1){
             return arr;
         }
         if (c < r - 1){
@@ -28,10 +28,9 @@ public class BubbleSortRecursion {
                 arr[c] = arr[c+1];
                 arr[c+1] = temp;
             }
-            Bsr(arr,r,c+1);
+            return Bsr(arr,r,c+1);
         }else{
-            Bsr(arr,r-1,0);
+            return Bsr(arr,r-1,0);
         }
-        return arr;
     }
 }
